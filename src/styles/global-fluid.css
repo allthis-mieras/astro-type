@@ -1,6 +1,10 @@
 :root {
   /* type:fluid */
   /* uses --base-rem */
+
+  --base-rem: var(--global-rem);
+  --base-type-scale: var(--scale-4-major-third);
+
   --text-scale: var(--base-type-scale);
   --text-l-1: calc(var(--base-rem) * var(--text-scale));
   --text-l-2: calc(var(--text-l-1) * var(--text-scale));

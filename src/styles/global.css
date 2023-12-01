@@ -10,10 +10,10 @@
   --scale-8-minor-sixth: 1.6;
   --scale-9-golden-ratio: 1.618;
 
-  --base-font-size: 0.875rem;
-  --base-fluid-ratio: 0.875;
-  --base-rem: calc(var(--base-font-size) + var(--base-fluid-ratio) * 1vw);
-  --base-text-scale: var(--scale-5-perfect-fourth);
+  --global-font-size: 1rem;
+  --global-fluid-ratio: 0.875;
+  --global-rem: calc(var(--global-font-size) + var(--global-fluid-ratio) * 1vw);
+  --global-text-scale: var(--scale-5-minor-third);
 
   /* fonts */
   --font-system: "Helvetica Neue", Helvetica, system-ui, -apple-system,
@@ -29,114 +29,24 @@
   --clr-brand: #005500;
 }
 
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Prevent font size inflation */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
-/* Remove default margin in favour of better control in authored CSS */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-  margin-block-end: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
-/* Set core body defaults */
 body {
-  min-height: 100vh;
-  line-height: 100%;
-}
-
-/* Set shorter line heights on headings and interactive elements */
-h1,
-h2,
-h3,
-h4,
-button,
-input,
-label {
-  line-height: 1.1;
-}
-
-/* Balance text wrapping on headings */
-h1,
-h2,
-h3,
-h4 {
-  text-wrap: balance;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
-}
-
-body {
-  font-size: var(--base-rem);
+  /* font-size: var(--base-rem); */
   font-family: var(--font-body);
 }
 
 h1,
 .text-l-1 {
-  font-size: var(--text-l-1);
+  font-size: var(--text-l-7);
 }
 
 h2,
 .text-l-2 {
-  font-size: var(--text-l-2);
+  font-size: var(--text-l-6);
 }
 
 h3,
 .text-l-3 {
-  font-size: var(--text-l-3);
+  font-size: var(--text-l-5);
 }
 
 h4,
@@ -146,16 +56,16 @@ h4,
 
 h5,
 .text-l-5 {
-  font-size: var(--text-l-5);
+  font-size: var(--text-l-3);
 }
 
 h6,
 .text-l-6 {
-  font-size: var(--text-l-6);
+  font-size: var(--text-l-2);
 }
 
 .text-l-7 {
-  font-size: var(--text-l-7);
+  font-size: var(--text-l-1);
 }
 
 p,
@@ -173,4 +83,15 @@ p,
 
 .text-xxs {
   font-size: var(--text-s-3);
+}
+
+.container {
+  display: grid;
+  /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+  grid-auto-columns: auto;
+  gap: var(--global-rem);
+}
+.column {
+  background: #f1f1f1;
+  padding: var(--global-rem);
 }

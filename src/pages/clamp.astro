@@ -2,7 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import "../styles/global-fluid.css";
+import "../styles/global-clamp.css";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
@@ -15,8 +15,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <!-- <Header title={SITE_TITLE} /> -->
 
     <div class="container">
-      <div class="column col-span-2">
-        <h1>Fluid</h1>
+      <div class="column">
+        <h1>Clamp</h1>
         <p>
           This is some text with base font size. Lorem, ipsum dolor sit amet
           consectetur adipisicing elit. Voluptatum, nesciunt. Aliquid in
@@ -135,16 +135,5 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
       </p>
     </main> -->
     <!-- <Footer /> -->
-    <style>
-      .container {
-        display: grid;
-        /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
-        grid-auto-columns: auto;
-        gap: var(--base-rem);
-      }
-      .column {
-        background: #f1f1f1;
-      }
-    </style>
   </body>
 </html>
