@@ -21,4 +21,5 @@
 
 body {
   font-size: var(--text-base);
+  line-height: inherit;
 }
