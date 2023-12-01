@@ -19,8 +19,3 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
-
-styles/.grid.scss
-components/Footer.astro
-components/Header.astro
-pages/grid.astro
