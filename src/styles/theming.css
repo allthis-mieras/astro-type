@@ -1,0 +1,7 @@
+:root {
+  /* darkmode + theming */
+  --theme-01-clr-a: var(--clr-white);
+  --theme-01-clr-b: var(--clr-black);
+  --theme-01-blend-a: multiply;
+  --theme-01-blend-a: screen;
+}

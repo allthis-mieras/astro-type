@@ -1,0 +1,153 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global-grid.scss";
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <!-- <Header title={SITE_TITLE} /> -->
+    <header>
+      <input type="checkbox" name="" value="" id="vertical-grid" />
+      <label for="vertical-grid"> View grid</label>
+      <div class="vertical-grid"></div>
+    </header>
+
+    <div class="wrapper">
+      <aside class="sidebar">
+        <a href="#"> Sidebar Link</a>
+        <a href="#"> Another Sidebar Link</a>
+        <a href="#"> Link in the Sidebar</a>
+      </aside>
+
+      <main>
+        <h1>Vertical Grid:</h1>
+        <h2>An introductory sandbox</h2>
+
+        <p class="intro">
+          This is me; playing with how to create a vertical grid and maintain
+          it.
+        </p>
+
+        <div class="columns columns--2">
+          <div>
+            <h3>Typography</h3>
+            <h4>Headers and body text</h4>
+            <p>
+              Wash. You gotta be kitten me right meow What a cat-ass-trophy!
+              soft kitty warm kitty little ball of furr sniff sniff, yet lick
+              left leg for ninety minutes, still dirty.
+            </p>
+
+            <p>
+              Tickle my belly at your own peril i will pester for food when
+              you're in the kitchen even if it's salad cats making all the
+              muffins and instantly break out into full speed gallop across the
+              house for no reason sniff sniff but cough. Cat mojo love and coo
+              around boyfriend who purrs and makes the perfect moonlight eyes so
+              i can purr and swat the glittery gleaming yarn to him (the yarn is
+              from a $125 sweater) for claw your carpet in places everyone can
+              see - why hide my amazing artistic clawing skills?, thug cat.
+            </p>
+            <ul>
+              <li>Ooh, are those your $250 dollar sandals?</li>
+              <li>Lemme use that as my litter box behind the couch,</li>
+              <li>
+                but if human is on laptop sit on the keyboard sit in window and
+                stare
+              </li>
+              <li>oooh, a bird, yum and stinky cat purr while eating.</li>
+            </ul>
+
+            <p>
+              Pet me pet me don't pet me i like frogs and 0 gravity so attack
+              feet. Destroy couch mrow sleeps on my head suddenly go on
+              wild-eyed crazy rampage or chase after silly colored fish toys
+              around the house so eats owners hair then claws head for hiss at
+              vacuum cleaner.
+            </p>
+          </div>
+
+          <div>
+            <h3>Forms & Buttons</h3>
+            <p>
+              Things and stuff, there are more words so that I can see if the
+              things line up across columns and I think that they might and I'm
+              really pumped about it.
+            </p>
+            <div class="form">
+              <h4>Basic Information</h4>
+              <div class="form__field">
+                <label for="text">Name</label>
+                <input type="text" id="text" value="" />
+              </div>
+
+              <div class="form__field">
+                <label for="street">Street Address</label>
+                <input
+                  class="input--full-width"
+                  type="text"
+                  id="street"
+                  name=""
+                  value=""
+                />
+              </div>
+
+              <div class="form__group">
+                <div class="form__field">
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="" value="" />
+                </div>
+
+                <div class="form__field">
+                  <label for="state">State</label>
+                  <input type="text" id="state" name="" value="" />
+                </div>
+
+                <div class="form__field">
+                  <label for="zip">Zip Code</label>
+                  <input type="number" id="zip" name="" value="" />
+                </div>
+              </div>
+
+              <div class="form__actions">
+                <a href="#" class="button">Cancel</a>
+                <a href="#" class="button button--cta"
+                  >Update Basic Information</a
+                >
+              </div>
+            </div>
+
+            <div class="form">
+              <h4>Contact Information</h4>
+              <div class="form__field">
+                <label for="email">Email</label>
+                <input type="email" id="email" value="" />
+              </div>
+
+              <div class="form__field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="" value="" />
+              </div>
+
+              <div class="form__actions">
+                <a href="#" class="button">Cancel</a>
+                <a href="#" class="button button--cta"
+                  >Update More Information</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- <Footer /> -->
+  </body>
+</html>

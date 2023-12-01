@@ -1,0 +1,33 @@
+:root {
+  /* type:clamp */
+
+  /* https://utopia.fyi/type/calculator/?c=320,16,1.25,2560,24,1.25,7,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  --step--3: clamp(0.5119rem, 0.4753rem + 0.183vw, 0.7681rem);
+  --step--2: clamp(0.64rem, 0.5943rem + 0.2286vw, 0.96rem);
+  --step--1: clamp(0.8rem, 0.7429rem + 0.2857vw, 1.2rem);
+  --step-0: clamp(1rem, 0.9286rem + 0.3571vw, 1.5rem);
+  --step-1: clamp(1.25rem, 1.1607rem + 0.4464vw, 1.875rem);
+  --step-2: clamp(1.5625rem, 1.4509rem + 0.558vw, 2.3438rem);
+  --step-3: clamp(1.9531rem, 1.8136rem + 0.6978vw, 2.93rem);
+  --step-4: clamp(2.4413rem, 2.2669rem + 0.8719vw, 3.6619rem);
+  --step-5: clamp(3.0519rem, 2.8339rem + 1.0897vw, 4.5775rem);
+  --step-6: clamp(3.815rem, 3.5426rem + 1.3621vw, 5.7219rem);
+  --step-7: clamp(4.7681rem, 4.4275rem + 1.7031vw, 7.1525rem);
+
+  --text-l-1: var(--step-7);
+  --text-l-2: var(--step-6);
+  --text-l-3: var(--step-5);
+  --text-l-4: var(--step-4);
+  --text-l-5: var(--step-3);
+  --text-l-6: var(--step-2);
+  --text-l-7: var(--step-1);
+  --text-base: var(--step-0);
+  --text-s-1: var(--step--1);
+  --text-s-2: var(--step--1);
+  --text-s-3: var(--step--3);
+}
+
+body {
+  font-size: var(--text-base);
+}

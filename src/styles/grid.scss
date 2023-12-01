@@ -1,0 +1,325 @@
+///////////////////
+// Establish the Grid
+///////////////////
+
+// Grid Variables
+// Play with these to modify the grid!
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+$grid: $font-size-base * $line-height-base;
+
+// Grid Function
+@function grid($count) {
+  @return calc(#{$grid} * #{$count});
+}
+
+// Reset browser defaults
+
+body,
+html {
+  margin: 0;
+  padding: 0 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+blockquote,
+p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  line-height: grid(1);
+}
+
+//////////////////
+// Visual Styles and Using the Grid
+//////////////////
+
+// Functions
+
+@function hover($color) {
+  @return darken($color, 15%);
+}
+
+// Variables
+
+// Color
+
+$gray: #555;
+$gray-light: #999;
+$gray-lightest: #ededed;
+
+$color-cta: #69c3e2;
+$color-danger: #e05851;
+$color-info: #eacd1f;
+
+// Units
+$unit-xs: 2px;
+$unit-sm: 4px;
+$unit-md: 8px;
+$unit-lg: 16px;
+$unit-xl: 32px;
+
+// Typography
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial;
+}
+
+body,
+html {
+  color: #222;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: grid(1);
+  margin-bottom: grid(1);
+  margin-top: grid(1);
+}
+
+h2 {
+  font-size: 2em;
+  line-height: grid(1);
+  margin-bottom: grid(1);
+  margin-top: grid(1);
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: grid(2);
+}
+
+h4 {
+  color: $gray;
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.9em;
+}
+
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 {
+  margin-top: grid(1);
+}
+
+.intro {
+  font-size: 1.25em;
+}
+
+p {
+  + p {
+    margin-top: grid(1);
+    margin-bottom: grid(1);
+  }
+}
+
+ul,
+ol {
+  margin-top: grid(1);
+  margin-bottom: grid(1);
+  padding-left: 1em;
+}
+
+// Sidebar
+.sidebar {
+  background-color: $gray-lightest;
+  border-radius: $unit-sm;
+  flex-grow: 1;
+  margin-right: 2em;
+  padding: grid(1);
+
+  a {
+    color: $gray;
+    display: block;
+    margin: grid(0.5) 0;
+    text-decoration: none;
+
+    :hover,
+    :active,
+    :focus {
+      color: hover($gray);
+    }
+  }
+}
+
+// Form
+.form {
+  &__field {
+    margin-bottom: grid(1);
+  }
+
+  &__group {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .form__field {
+      margin-right: 1em;
+    }
+  }
+
+  &__actions {
+    margin-top: grid(1);
+  }
+
+  + .form {
+    margin-top: grid(3);
+  }
+}
+
+label {
+  display: block;
+  font-size: 0.8em;
+  font-weight: bold;
+  line-height: grid(1);
+}
+
+.input {
+  &--full-width {
+    width: 100%;
+  }
+}
+
+input {
+  border: 1px solid $gray-light;
+  border-radius: $unit-sm;
+  box-shadow: none;
+  box-sizing: border-box;
+  font-size: 0.9em;
+  height: grid(1);
+  outline: none;
+  padding: 0 0.5em;
+
+  &[type="text"],
+  &[type="textarea"],
+  &[type="number"],
+  &[type="phone"],
+  &[type="email"] {
+    &:hover {
+      border-color: hover($gray-light);
+    }
+
+    &:focus {
+      border-color: $color-info;
+    }
+  }
+
+  &[type="radio"],
+  &[type="checkbox"] {
+    height: initial;
+
+    + label {
+      display: inline;
+    }
+  }
+}
+
+// Button
+.button {
+  background-color: $gray;
+  border-radius: $unit-sm;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  height: grid(1);
+  padding: 0 2em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: hover($gray);
+  }
+
+  &--cta {
+    background-color: $color-cta;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: hover($color-cta);
+    }
+  }
+
+  + .button {
+    margin-right: 1em;
+  }
+}
+
+// Layout
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin: auto;
+  max-width: 1200px;
+  padding-bottom: grid(4);
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+header {
+  padding: $grid 0;
+}
+
+main {
+  flex-basis: 75%;
+  padding-bottom: 2em;
+}
+
+.columns {
+  display: grid;
+  grid-gap: $grid;
+
+  &--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/////////////////
+// View Grid in Background
+/////////////////
+$minus-one: calc(#{$grid} - 1px);
+
+.vertical-grid {
+  background: repeating-linear-gradient(
+    transparent,
+    transparent $minus-one,
+    rgba(255, 0, 0, 0.5) $minus-one,
+    rgba(255, 0, 0, 0.5) $grid
+  );
+  display: none;
+  height: 400%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -100;
+}
+
+#vertical-grid:checked ~ .vertical-grid {
+  display: block;
+}

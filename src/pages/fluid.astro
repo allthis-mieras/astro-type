@@ -2,7 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import "../styles/global-clamp.css";
+
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
@@ -14,32 +14,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <body>
     <!-- <Header title={SITE_TITLE} /> -->
 
-    <div class="container">
-      <div class="column">
-        <h1>Heading 1</h1>
-        <p>This is some text with base font size.</p>
-      </div>
-
-      <div class="column">
-        <h2>Heading 2</h2>
-        <p class="text-s">This is some text with small font size.</p>
-      </div>
-
-      <div class="column">
-        <h3>Heading 3</h3>
-        <p class="text-xs">This is some text with extra small font size.</p>
-      </div>
-
-      <div class="column">
-        <h4>Heading 4</h4>
-        <p class="text-xxs">
-          This is some text with extra extra small font size.
-        </p>
-      </div>
-    </div>
     <main>
-      <div class="">
-        <h1>🧑‍🚀 Hello, Astronaut!</h1>
+      <div class="text-">
+        <h1 class="text-">🧑‍🚀 Hello, Astronaut!</h1>
         <p>
           Welcome to the official <a href="https://astro.build/">Astro</a> blog
           starter template. This template serves as a lightweight,
