@@ -1,0 +1,19 @@
+---
+const { title, subtitle, class: className, ...props } = Astro.props;
+---
+
+<div class:list={[className]} {...props}>
+  <h2 class="title text-l-6">{title}</h2>
+  <p class="subtitle text-base">{subtitle}</p>
+  <p class="text-xxs"><slot /></p>
+</div>
+
+<style>
+  .title {
+    font-weight: bold;
+  }
+
+  .subtitle {
+    font-weight: 500;
+  }
+</style>

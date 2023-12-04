@@ -1,7 +1,8 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import "../styles/global-fluid.css";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Projects from "../components/Projects.astro";
+import "../styles/global-fluid.css";
 ---
 
 <!doctype html>
@@ -89,6 +90,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         <p class="debug-global-rem">Tekst</p>
       </div>
     </div>
+
+    <Projects />
     <!-- <main>
       <div class="">
         <h1>🧑‍🚀 Hello, Astronaut!</h1>

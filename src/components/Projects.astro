@@ -1,0 +1,171 @@
+---
+import ProjectCard from "../components/ProjectCard.astro";
+---
+
+<div class="project-grid">
+  <ProjectCard
+    class="start-1 end-7 large"
+    title="Project 1"
+    subtitle="Subtitle"
+  >
+    goeie dag
+  </ProjectCard>
+  <ProjectCard
+    class="start-7 end-13 medium"
+    title="Project 2"
+    subtitle="Subtitle"
+  >
+    goeie dag
+  </ProjectCard>
+  <ProjectCard
+    class="start-3 end-8 small"
+    title="Project 3"
+    subtitle="Subtitle"
+  >
+    goeie dag
+  </ProjectCard>
+  <ProjectCard
+    class="start-8 end-13 small"
+    title="Project 4"
+    subtitle="Subtitle"
+  >
+    goeie dag
+  </ProjectCard>
+</div>
+
+<style>
+  .project-grid {
+    display: grid;
+
+    padding: var(--page-margin);
+    row-gap: var(--page-margin);
+    background: var(#fff);
+  }
+
+  .project-grid div {
+    background: #f4f4f4;
+    padding: var(--page-margin);
+  }
+
+  .project-grid .large {
+    background: green;
+  }
+
+  .project-grid .small {
+    background: red;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      grid-template-rows: auto;
+      align-items: start;
+      -moz-column-gap: var(--grid-gutter);
+      column-gap: var(--page-margin);
+      padding: var(--page-margin);
+    }
+
+    .project-grid > div {
+    }
+    .start-1 {
+      grid-column-start: 1;
+    }
+
+    .start-2 {
+      grid-column-start: 2;
+    }
+
+    .start-3 {
+      grid-column-start: 3;
+    }
+
+    .start-4 {
+      grid-column-start: 4;
+    }
+
+    .start-5 {
+      grid-column-start: 5;
+    }
+
+    .start-6 {
+      grid-column-start: 6;
+    }
+
+    .start-7 {
+      grid-column-start: 7;
+    }
+
+    .start-8 {
+      grid-column-start: 8;
+    }
+
+    .start-9 {
+      grid-column-start: 9;
+    }
+
+    .start-10 {
+      grid-column-start: 10;
+    }
+
+    .start-11 {
+      grid-column-start: 11;
+    }
+
+    .start-12 {
+      grid-column-start: 12;
+    }
+
+    .end-1 {
+      grid-column-end: 1;
+    }
+
+    .end-2 {
+      grid-column-end: 2;
+    }
+
+    .end-3 {
+      grid-column-end: 3;
+    }
+
+    .end-4 {
+      grid-column-end: 4;
+    }
+
+    .end-5 {
+      grid-column-end: 5;
+    }
+
+    .end-6 {
+      grid-column-end: 6;
+    }
+
+    .end-7 {
+      grid-column-end: 7;
+    }
+
+    .end-8 {
+      grid-column-end: 8;
+    }
+
+    .end-9 {
+      grid-column-end: 9;
+    }
+
+    .end-10 {
+      grid-column-end: 10;
+    }
+
+    .end-11 {
+      grid-column-end: 11;
+    }
+
+    .end-12 {
+      grid-column-end: 12;
+    }
+
+    .end-13 {
+      grid-column-end: 13;
+    }
+  }
+</style>
