@@ -3,33 +3,20 @@ import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <div class="project-grid">
-  <ProjectCard
-    class="start-1 end-7 large"
-    title="Project 1"
-    subtitle="Subtitle"
-  >
-    goeie dag
+  <ProjectCard class="start-2 large" title="Project 1" subtitle="Subtitle">
+    large
   </ProjectCard>
-  <ProjectCard
-    class="start-7 end-13 medium"
-    title="Project 2"
-    subtitle="Subtitle"
-  >
-    goeie dag
+  <ProjectCard class="small" title="Project 5" subtitle="Subtitle">
+    small
   </ProjectCard>
-  <ProjectCard
-    class="start-3 end-8 small"
-    title="Project 3"
-    subtitle="Subtitle"
-  >
-    goeie dag
+  <ProjectCard class="end-13 default" title="Project 2" subtitle="Subtitle">
+    default
   </ProjectCard>
-  <ProjectCard
-    class="start-8 end-13 small"
-    title="Project 4"
-    subtitle="Subtitle"
-  >
-    goeie dag
+  <ProjectCard class="default start-2" title="Project 3" subtitle="Subtitle">
+    default
+  </ProjectCard>
+  <ProjectCard class="small start-5" title="Project 4" subtitle="Subtitle">
+    small
   </ProjectCard>
 </div>
 
@@ -66,8 +53,22 @@ import ProjectCard from "../components/ProjectCard.astro";
       padding: var(--page-margin);
     }
 
-    .project-grid > div {
+    .small {
+      grid-column: span 4 / span 4;
     }
+
+    .default {
+      grid-column: span 6 / span 6;
+    }
+
+    .large {
+      grid-column: span 8 / span 8;
+    }
+
+    .full {
+      grid-column: span 12;
+    }
+
     .start-1 {
       grid-column-start: 1;
     }
